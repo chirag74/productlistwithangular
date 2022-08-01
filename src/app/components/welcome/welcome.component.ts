@@ -12,11 +12,15 @@ export class WelcomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  productDetails(){
-    this.route.navigateByUrl("/product")
+
+  addProduct(){
+    this.route.navigateByUrl("/merchant")
+  }
+  viewProduct(){
+    this.route.navigateByUrl("/shop")
   }
   categoryDetails(){
-    this.route.navigateByUrl("/category")
+    this.route.navigateByUrl("/categories")
   }
 
 }

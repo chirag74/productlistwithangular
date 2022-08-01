@@ -1,40 +1,43 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { from } from 'rxjs';
-import { PrdouctListComponent } from './component/prdouct-list/prdouct-list.component';
-import { CategoryListComponent } from './component/category-list/category-list.component';
-import { RouterModule, Routes } from '@angular/router';
-import { WelcomeComponent } from './component/welcome/welcome.component';
+import {HttpClientModule} from '@angular/common/http';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { CategoryListComponent } from './components/category-list/category-list.component';
+import { AddProductComponent } from './components/add-product/add-product.component';
+import { AddCartComponent } from './components/add-cart/add-cart.component';
+import { CartComponent } from './components/cart/cart.component';
 
 const route : Routes = [
-  {path : '', component : WelcomeComponent },
-   {path : 'product', component : PrdouctListComponent},
-   {path: 'category', component : CategoryListComponent}
- ]
+  {path : '',component : WelcomeComponent},
+  {path : 'shop', component : ProductListComponent},
+  {path : 'categories', component : CategoryListComponent},
+  {path : 'merchant', component : AddProductComponent},
+  { path: 'cart', component: CartComponent },
+]
 
 @NgModule({
   declarations: [
     AppComponent,
-    PrdouctListComponent,
+    WelcomeComponent,
+    ProductListComponent,
     CategoryListComponent,
-    WelcomeComponent
+    AddProductComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    RouterModule.forRoot(route)
+    RouterModule.forRoot(route),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-
-
-
