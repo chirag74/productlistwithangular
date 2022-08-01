@@ -1,0 +1,51 @@
+<h1>Product Table</h1>
+<div class="emptable">
+<table style="background-color: #35393f;" border="1">
+<tr>
+<th>
+    id
+</th>
+<th>
+    sku
+</th>
+<th>
+    name
+</th>
+<th>
+    description 
+</th>
+<th>
+
+    unitprice 
+</th>
+<th>
+    imageurl   
+</th>
+<th>
+    unitinstock 
+</th>
+<th>
+    datecreated 
+</th>
+<th>
+    lastupdated 
+</th>
+<th>
+    categoryid 
+</th>
+</tr>
+<tr *ngFor="let employee of product">
+    <td>{{employee.id}}</td>
+    <td>{{employee.sku}}</td>
+    <td>{{employee.name}}</td>
+    <td>{{employee.description}}</td>
+    <td>{{employee.unitprice}}</td>
+    <td>{{employee.imageurl}}</td>
+    <td>{{employee.unitinstock}}</td>
+    <td>{{employee.datecreated}}</td>
+    <td>{{employee.lastupdated}}</td>
+    <td>{{employee.categoryid}}</td>
+
+</tr>
+</table>
+</div>
