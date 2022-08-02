@@ -11,7 +11,7 @@ import { ProductmanagementServiceService } from 'src/app/services/productmangemn
 })
 export class ProductFormComponent implements OnInit {
 
-  productCategories: ProductCategory[];
+  productCategories: ProductCategory[] = [];
   product:Product=new Product(0,"","","",0,"",0,"","",0)
 
   constructor(private service:ProductmanagementServiceService,private route:Router) { }
@@ -25,9 +25,6 @@ export class ProductFormComponent implements OnInit {
       this.productCategories = data
     })
   }
-  // onSubmit(){
-  //   this.service.saveProduct(this.product).subscribe(()=>{
-  //     this.route.navigateByUrl("product")
-  //   })
+
 
 }

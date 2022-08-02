@@ -1,11 +1,6 @@
-.availableproduct{
-  color : rgb(15, 129, 15);
-  font-size: 30px;
-  font-weight: bold;
+th{
+  font-family: sans-serif;
 }
-
-.unavailableproduct{
-  color : red;
-  font-size: 30px;
-  font-weight: bold;
+td{
+  font-family: sans-serif;
 }

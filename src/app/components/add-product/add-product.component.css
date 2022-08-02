@@ -1,0 +1,80 @@
+form{
+    /* border: 1px solid black; */
+    width: 600px;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 1px black;
+    height: 465px;
+    margin-top: -10px;
+    z-index: 1000;
+   
+}
+input{
+    width: 300px;
+    margin-top: 10px;
+    /* border: 1px solid blue; */
+
+
+}
+
+label{
+    margin-top: 10px;
+    font-family: sans-serif;
+    color: #000;
+    /* border: 1px solid blue; */
+
+}
+.flexit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid blue; */
+
+    
+}
+input[type="submit"]{
+    color: white;
+    background-color: darkturquoise;
+    width: 150px;
+    font-family: sans-serif;
+    border: none;
+    /* border: 1px solid blue; */
+
+}
+.nav{
+margin-top: 10px;
+width: 100%;
+/* border: 1px solid blue; */
+}
+.nav>div{
+    background-color: darkturquoise;
+    /* border: 1px solid blue; */
+
+    height: 60px;
+  width: 100%;
+}
+.nav>div>div{
+    height: 100%;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 200px;
+    list-style: none;
+    align-items: center;
+    height: 100%;
+    /* border: 1px solid blue; */
+
+
+}
+ul li button{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: 1px solid white;
+    display: flex;
+    font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+}
