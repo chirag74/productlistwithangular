@@ -1,0 +1,13 @@
+<form #loginForm="ngForm" class="form-group" (ngSubmit)="loginSubmit2(loginForm.value)"  novalidate>
+    Enter email<input type="text" class="form-control" name="email" ngModel #email=ngModel required minlength="2" maxlength="30"><br/>
+    Enter password<input class="form-control" type="password" name="password" ngModel #password=ngModel required minlength="2" maxlength="30"><br/>
+    <button class="btn btn-primary" [disabled]="!loginForm.valid">Login</button>
+    </form>
+    
+    <div>
+    <!-- <div *ngIf="email.errors?.required && email.touched">Please enter the emial id</div>
+    <div *ngIf="password.errors?.required && email.touched">Please enter the password</div>
+    <div *ngIf="email.errors?.minlength && email.touched">Please enter 2 characters minimum </div>
+    <div *ngIf="password.errors?.minlength && email.touched">Please enter 2 characters minimum </div>
+     -->
+     <!-- (ngSubmit)="loginSubmit2(loginForm.value)"  -->

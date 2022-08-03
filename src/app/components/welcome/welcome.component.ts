@@ -22,5 +22,8 @@ export class WelcomeComponent implements OnInit {
   categoryDetails(){
     this.route.navigateByUrl("/categories")
   }
+  viewLogin(){
+    this.route.navigateByUrl("/login")
+  }
 
 }

@@ -12,12 +12,16 @@ import { CategoryListComponent } from './components/category-list/category-list.
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { AddCartComponent } from './components/add-cart/add-cart.component';
 import { CartComponent } from './components/cart/cart.component';
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './auth.guard';
+import { NgHttpLoaderModule } from 'ng-http-loader';
 
 const route : Routes = [
   {path : '',component : WelcomeComponent},
-  {path : 'shop', component : ProductListComponent},
+  {path : 'shop',canActivate:[AuthGuard],  component : ProductListComponent},
+  {path:'login',component:LoginComponent},
   {path : 'categories', component : CategoryListComponent},
-  {path : 'merchant', component : AddProductComponent},
+  {path : 'merchant', canActivate:[AuthGuard], component : AddProductComponent},
   { path: 'cart', component: CartComponent },
 ]
 
@@ -28,14 +32,16 @@ const route : Routes = [
     ProductListComponent,
     CategoryListComponent,
     AddProductComponent,
-    CartComponent
+    CartComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     RouterModule.forRoot(route),
-    FormsModule
+    FormsModule,
+    NgHttpLoaderModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

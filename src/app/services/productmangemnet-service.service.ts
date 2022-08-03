@@ -9,7 +9,7 @@ import { ProductCategory } from '../common/product-category';
 })
 export class ProductmanagementServiceService {
  
-  
+  isUserLoggedIn=false;
   private baseUrl="http://localhost:8080/api/prod";
   private baseDUrl="http://localhost:8080/api/category";
 
@@ -25,6 +25,16 @@ export class ProductmanagementServiceService {
     .pipe(map(response => response._embedded.productCategories));
 
   }
+getloginStatus(){
+  return this.isUserLoggedIn;
+}
+setUserLoggedIn(){
+  this.isUserLoggedIn=true
+}
+setUserLoggedOut(){
+  this.isUserLoggedIn=false
+}
+
 }
 
 
